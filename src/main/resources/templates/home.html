@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista użytkowników</title>
+</head>
+<body>
+
+<h1>Lista użytkowników</h1>
+
+<a href="/add">Dodaj użytkownika</a>
+
+<ul class="list-group">
+    <li class="list-group-item" th:each="user: ${userList}">
+        <a th:text="|${user.name} ${user.lastName} ${user.birthDate} ${user.email} ${user.isNewsletter}|"></a>
+    </li>
+</ul>
+
+
+</body>
+</html>
