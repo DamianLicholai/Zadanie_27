@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista użytkowników</title>
+</head>
+<body>
+
+<h1>Dodaj użytkownika</h1>
+
+
+<form action="/add" method="post" th:object="${user}">
+
+    <input type="hidden" th:field="*{id}"/>
+
+    <div class="mb-3">
+        <label for="name" class="form-label">imię</label>
+        <input type="text" class="form-control" id="name" th:field="*{name}">
+    </div>
+
+    <div class="mb-3">
+        <label for="lastName" class="form-label">nazwisko</label>
+        <input type="text" class="form-control" id="lastName" th:field="*{lastName}">
+    </div>
+
+    <div class="mb-3">
+        <label for="birthDate" class="form-label">data urodzenia</label>
+        <input type="text" class="form-control" id="birthDate" th:field="*{birthDate}">
+    </div>
+
+
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary mb-3">Dodaj</button>
+    </div>
+
+</body>
+</html>
